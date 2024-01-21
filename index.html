@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tic Tac Toe</title>
+    <link rel="icon" type="image/png" href="/assets/title-icon.png" class="title-icon">
+
+  </head>
+  <body>
+    <div id="info">
+      <h2 id="info-title">TIC TAC TOE</h2>
+      <div class="info-player">
+        <img
+          src="assets/x.png"
+          alt="Player 1 icon"
+          class="info-player-icon"
+        />
+        <h1 id="info-player1">Player 1</h1>
+        <h1>:</h1>
+        <h1 id="player-score1">0</h1>
+      </div>
+      <div class="info-player">
+        <img
+          src="assets/o.png"
+          alt="Player 2 icon"
+          class="info-player-icon"
+        />
+        <h1 id="info-player2">Player 2</h1>
+        <h1>:</h1>
+        <h1 id="player-score2">0</h1>
+      </div>
+    </div>
+    <div id="grid">
+      <div id="grid-square1" class="grid-square"></div>
+      <div id="grid-square2" class="grid-square"></div>
+      <div id="grid-square3" class="grid-square"></div>
+      <div id="grid-square4" class="grid-square"></div>
+      <div id="grid-square5" class="grid-square"></div>
+      <div id="grid-square6" class="grid-square"></div>
+      <div id="grid-square7" class="grid-square"></div>
+      <div id="grid-square8" class="grid-square"></div>
+      <div id="grid-square9" class="grid-square"></div>
+    </div>
+    <div id="instructions">
+      <h2 id="instructions-text"></h2>
+      <button id="instructions-btn">Start Game</button>
+    </div>
+    <div id="modal">
+      <div id="modal-content">
+        <h2>Enter Player's Name</h2>
+        <form>
+          <label for="player1">Player 1</label>
+          <input
+            type="text"
+            id="player1"
+            name="player1"
+            placeholder="Player 1"
+            maxlength="10"
+            required
+          />
+          <label for="player2">Player 2</label>
+          <input
+            type="text"
+            id="player2"
+            name="player2"
+            placeholder="Player 2"
+            maxlength="10"
+            required
+          />
+          <input type="submit" value="Start Game" />
+        </form>
+      </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p class="made-by">Developed by</p>
+            <p class="author" onclick="location.href='https://tomgarrett906.github.io/'">Tom Garrett</p>
+        </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/* COLORS */
+:root {
+    --backgroundColor: linear-gradient(to right, rgba(4,57,46,1) 0%, rgba(0,153,102,1) 100%);
+    --squareColor: white;
+    --gridColor: linear-gradient(to left, gold 10%, rgb(170, 145, 0));
+    --border: 2px rgb(0, 0, 0) ridge;
+    --backgroundModal: #0e110eaf;
+    --textWhite: white;
+    --textDark: rgb(54,54,54);
+    --textLight: #c7c7c7;
+    --textGold: rgb(255, 217, 0);
+    --dark: #080808;
+    --bgSilver: rgba(255, 255, 255, 0.258);
+    --bgBlue: linear-gradient(to right, rgb(0, 0, 189) 0%, rgb(0, 0, 76));
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to left, #0808087e, #080808cd) ,url(/assets/wood-surface.png);
+    background-size: cover;
+    background-position: center;
+    font-family: "Gochi Hand", sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h1:hover,
+h2:hover {
+    cursor: default;
+}
+
+/* INFO */
+#info {
+    text-align: center;
+    width: 15rem;
+    color: var(--textGold);
+}
+
+#info-title {
+    font-size: 3rem;
+}
+
+.info-player {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: var(--border);
+    color: var(--dark);
+    background: var(--bgSilver);
+}
+
+.info-player-icon {
+    height: 1.3rem;
+    padding-top: 0.13rem;
+}
+
+#player-score1,
+#player-score2 {
+    color: var(--textWhite);
+}
+
+.cross {
+    background-image: url('assets/x.png');
+}
+
+.circle {
+    background-image: url('assets/o.png');
+}
+
+.cross,
+.circle {
+    background-size: cover;
+}
+
+/* GRID */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 400px;
+    width: 400px;
+    grid-gap: 0.4rem;
+    background: var(--gridColor);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: var(--border);
+}
+
+.grid-square {
+    background-color: var(--squareColor);
+    border-radius: 0.3rem;
+    border: var(--border);
+}
+
+.grid-square:hover {
+    cursor: pointer;
+}
+
+.grid-square:active {
+    scale: 95%;
+}
+
+/* INSTRUCTIONS */
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+#instructions-text {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--textWhite);
+}
+
+#instructions-btn {
+    cursor: pointer;
+    width: 15rem;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: var(--textWhite);
+}
+
+#instructions-btn:hover {
+    scale: 120%;
+    transition: 600ms;
+    color: var(--textGold);
+}
+
+#instructions-btn:active {
+    transform: translateY(0.15rem);
+}
+
+/* MODAL */
+
+#modal {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: var(--backgroundModal);
+}
+
+#modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 65%;
+        width: 40%;
+        background: var(--bgBlue);
+        border: var(--dark) ridge 0.2rem;
+        border-radius: 2rem;
+        color: var(--textWhite);
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: none;
+}
+
+input {
+    margin: 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.6rem 1.25rem;
+}
+
+::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+input[type=submit]:active {
+    transform: translateY(0.15 rem);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 15px;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: var(--border);
+    color: var(--dark);
+    background: var(--bgSilver);
+    cursor: default;
+}
+
+.author:hover {
+    color: var(--textWhite);
+    scale: 110%;
+    transition: 600ms;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+    #grid {
+        width: 300px;
+        height: 300px;
+    }
+    #info_title {
+        margin: 0 0 1rem;
+    }
+    body {
+        align-content: center;
+    }
+    #modal-content {
+        text-align: center;
+        height: 60%;
+        width: 80%;
+    }
+    input {
+        width: 10rem;
+    }
+    #instructions-btn {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 556px) {
+    footer {
+        position: absolute;
+        left: -30px;
+        bottom: -30px;
+        scale: 70%;
+        z-index: -100;
+    }
+}
+
+@media (max-width: 375px) {
+    footer {
+        position: absolute;
+        left: -30px;
+        bottom: -30px;
+        scale: 60%;
+        z-index: -100;
+    }
+}
